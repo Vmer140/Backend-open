@@ -41,4 +41,4 @@ services:
 
       # Actualiza esto manualmente en el dashboard cuando despliegues el frontend
       - key: FRONTEND_URL
-        value: http://localhost:4200
+        value: https://frontend-open-j0s3d19gp-incleanhome.vercel.app/
