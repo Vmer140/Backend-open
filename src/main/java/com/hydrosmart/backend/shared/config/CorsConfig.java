@@ -13,14 +13,14 @@ public class CorsConfig {
     // En local toma localhost:4200 por defecto.
     // En Render, sobreescribe la variable de entorno FRONTEND_URL
     // con la URL real del frontend desplegado.
-    @Value("${app.cors.allowed-origin:http://localhost:4200}")
+    @Value("${app.cors.allowed-origin:http:https://frontend-open-j0s3d19gp-incleanhome.vercel.app}")
     private String allowedOrigin;
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
         // Acepta tanto localhost (desarrollo) como la URL de producción
-        config.setAllowedOrigins(List.of("http://localhost:4200", allowedOrigin));
+        config.setAllowedOrigins(List.of("https://frontend-open-j0s3d19gp-incleanhome.vercel.app", allowedOrigin));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
